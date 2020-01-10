@@ -1,7 +1,7 @@
 import numpy as np
-from numba import jit
+#from numba import jit
 
-@jit(nopython=True)
+#@jit(nopython=True)
 def PlantFun(psi,t,PEt,PE,z,dz,pars):
     # Root water uptake function, based on Feddes model
     

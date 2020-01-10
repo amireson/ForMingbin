@@ -1,8 +1,9 @@
-from numba import jit
+#from numba import jit
 import numpy as np
-from lib.vanGenuchten_numba import KFun
+#from lib.vanGenuchten_numba import KFun
+from lib.vanGenuchten import KFun
 
-@jit(nopython=True)
+#@jit(nopython=True)
 def DrainageFun(pars,psiB,dz):
     # Free drainage
     # Note, KFun always needs an array input, even if only a single item, and 

@@ -4,11 +4,12 @@ import numpy as np
 import pandas as pd
 import time
 
-from numba import jit
-from lib.MyNumba import MakeDictFloat
+#from numba import jit
+#from lib.MyNumba import MakeDictFloat
 
 # Import a library that contains soil moisture properties and functions
-from lib import vanGenuchten_numba as vg
+#from lib import vanGenuchten_numba as vg
+from lib import vanGenuchten as vg
 from lib import Richards as re
 from lib.plots import InfiltrationPlot
 from lib.plots import SimpleBalancePlot

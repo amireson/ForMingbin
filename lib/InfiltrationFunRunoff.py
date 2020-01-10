@@ -1,8 +1,9 @@
 import numpy as np
-from numba import jit
-from lib.vanGenuchten_numba import KFun
+#from numba import jit
+#from lib.vanGenuchten_numba import KFun
+from lib.vanGenuchten import KFun
 
-@jit(nopython=True)
+#@jit(nopython=True)
 def InfiltrationFun(t,qIt,qI,psiT,dz,pars):
     # Upper boundary infiltration flux and runoff
     # Infiltration capacity such that psiT<=0 

@@ -1,5 +1,6 @@
 import numpy as np
-from lib.vanGenuchten_numba import KFun
+#from lib.vanGenuchten_numba import KFun
+from lib.vanGenuchten import KFun
 
 def GetSteadyInfiltration(pars,q):
     # Use mid-point search to find psi, where K(psi)=q. Search in logspace

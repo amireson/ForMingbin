@@ -9,13 +9,16 @@ from scipy.interpolate import interp1d
 from scipy.integrate import odeint
 
 # numba to speed up runtimes
-from numba import jit
-from lib.MyNumba import MakeDictFloat, MakeDictArray
+#from numba import jit
+#from lib.MyNumba import MakeDictFloat, MakeDictArray
 
 # Import a library that contains soil moisture properties and functions
-from lib.vanGenuchten_numba import thetaFun
-from lib.vanGenuchten_numba import CFun
-from lib.vanGenuchten_numba import KFun
+#from lib.vanGenuchten_numba import thetaFun
+#from lib.vanGenuchten_numba import CFun
+#from lib.vanGenuchten_numba import KFun
+from lib.vanGenuchten import thetaFun
+from lib.vanGenuchten import CFun
+from lib.vanGenuchten import KFun
 
 # Import flux functions
 # Read run options:
@@ -99,7 +102,7 @@ def runmodel(IC,BC,pars,grid):
     return ts,state
 
 # Richards equation solver:
-@jit(nopython=True)
+#@jit(nopython=True)
 def RichardsModelSimple(psi,t,dz,z,n,qIt,qI,PEt,PE,pars): #,BC):
        
     # Basic properties:
